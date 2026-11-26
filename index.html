@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Blast</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="game">
+        <header class="top-bar">
+            <div class="brand">
+                <span class="brand-icon">🧩</span>
+                <div>
+                    <h1>BLOCK BLAST</h1>
+                    <p>Fill. Clear. Repeat.</p>
+                </div>
+            </div>
+
+            <button class="restart-btn" id="restartBtn" aria-label="Restart game">
+                ↻
+            </button>
+        </header>
+
+        <section class="score-container">
+            <div class="score-box">
+                <span>🏆 BEST SCORE</span>
+                <strong id="bestScore">0</strong>
+            </div>
+
+            <div class="score-box current">
+                <span>⭐ SCORE</span>
+                <strong id="score">0</strong>
+            </div>
+        </section>
+
+        <section class="board-container">
+            <div class="board" id="board"></div>
+        </section>
+
+        <section class="pieces-section">
+            <h2>CHOOSE YOUR BLOCKS</h2>
+            <p>Tap ↻ to rotate a block, then drag it onto the board</p>
+
+            <div class="pieces-container" id="piecesContainer">
+            </div>
+        </section>
+
+        <footer>
+            <span>🧩</span> Challenge your brain!
+        </footer>
+    </main>
+
+    <div class="game-over hidden" id="gameOver">
+        <div class="game-over-card">
+            <div class="game-over-icon">🎮</div>
+            <h2>GAME OVER!</h2>
+            <p>No more moves available.</p>
+
+            <div class="final-score">
+                <span>YOUR SCORE</span>
+                <strong id="finalScore">0</strong>
+            </div>
+
+            <button id="playAgainBtn">PLAY AGAIN ↻</button>
+        </div>
+    </div>
+
+    <div class="drag-ghost" id="dragGhost"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
